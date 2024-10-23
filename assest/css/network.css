@@ -1,0 +1,25 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.All-cards{
+    background-color: gray;
+    margin-top: 10px;
+
+}
+.All-cards .card{
+    background-color: white;
+    height: 290px;
+    width: 220px;
+    margin: 10px;
+    border-radius: 10px;
+    
+}
+.Cover-img{
+    background-color: aqua;
+    
+}
+.Cover-img img{
+    background-size: cover;
+    width: fit-content;
+}
