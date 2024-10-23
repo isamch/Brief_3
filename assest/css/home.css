@@ -44,10 +44,13 @@
   resize: none;
   padding:  1% 0 0 20px;
 } 
+textarea::placeholder{
+  color: var(--color-text);
 
+}
 
 .break-line-p-creat{
-  border-top: 1px solid black;
+  border-top: 1px solid var(--border-color);
   width: 95%;
   margin: 2% auto;
 }
@@ -56,20 +59,27 @@
 .creat-post .post-media ul{
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 
 .creat-post .post-media ul li{
   display: flex;
   align-items: baseline;
   gap: 20px;
-  padding: 10px 0;
+  padding: 15px 5%;
   cursor: pointer;
+  border-radius: 5px;
+  transition: 0.4s;
 }
 
 .creat-post .post-media ul li i{
   color: var(--color-linkedin-blue);
 }
+
+.creat-post .post-media ul li:hover{
+  background-color: var(--border-color);
+}
+
 
 /* sort by */
 .sort-by{
@@ -87,6 +97,7 @@
 .sort-by p span, .sort-by p span i{
   color: var(--color-linkedin-blue);
   cursor: pointer;
+
 }
 
 /* post owner */
@@ -99,6 +110,17 @@
 .creat-post .owner-info .owner{
   line-height: 1;
 }
+.creat-post .owner-info .owner small{
+  color: var(--color-subtitle);
+}
+
+
+.creat-post .owner-info h2:hover{
+  color: var(--color-linkedin-blue);
+  cursor: pointer;
+  text-decoration: underline;
+
+}
 
 .creat-post .paragraph{
   width: 70%;
@@ -109,6 +131,12 @@
   width: 100%;
   height: auto;
   margin-top: 10px;
+}
+
+.creat-post .paragraph p .hashtags{
+  color: var(--color-linkedin-blue);
+  font-weight: bold;
+  cursor: pointer;
 }
 
 
