@@ -6,7 +6,6 @@
     <title>JoblnTech</title>
     <!-- link -->
     <link rel="stylesheet" href="../assest/css/style.css">
-    <link rel="stylesheet" href="assest/css/home.css">
 
     <!-- link local -->
     <link rel="stylesheet" href="../assest/css/network.css">
@@ -23,7 +22,7 @@
 
       <nav class="header">
         <div class="logo-search">
-          <a href="index.html"><img src="../assest/images/logo banner.png"
+          <a href="../index.html"><img src="../assest/images/logo banner.png"
               alt="JoblnTech"></a>
           <div class="search-area">
             <label for="nsearch"><i class="fa-solid fa-magnifying-glass" style="color: #000000;"></i></label>
@@ -31,11 +30,18 @@
           </div>
         </div>
 
-        <ul>
+        <ul class="nav-full">
           <li><a href="../index.html"><i class="fa-solid fa-house" style="color: #000000;"></i><span>Home</span></a></li>
           <li><a href="network.html" id="nav-active"><i class="fa-solid fa-user-group" style="color: #000000;"></i><span>Network</span></a></li>
           <li><a href="profile.html"><i class="fa-solid fa-user" style="color: #000000;"></i><span>Profile</span></a></li>
         </ul>
+
+        <!-- toglle menu buregr -->
+        <div class="toggle">
+          <div class="line fr"></div>
+          <div class="line se"></div>
+          <div class="line la"></div>
+        </div>
 
       </nav>
 
@@ -100,6 +106,13 @@
 
 
     </div>
-
+    <script>
+      const humber = document.querySelector('.toggle');
+      const menuDown = document.querySelector('.nav-full');
+      humber.onclick = function () {
+      humber.classList.toggle('change');
+      menuDown.classList.toggle('hidd-menu');
+      }
+    </script>
   </body>
 </html>
