@@ -1,11 +1,27 @@
+:root{
+  --color-linkedin-blue: #0077B5;
+  --color-dark-gray: #333333;
+  --color-bgc-back: #F4F2EE;
+  --color-white: #FFFFFF;
+  --color-text: #333333;
+  --color-title: #000000; 
+  --color-subtitle: #555555;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --border-color: #DFDEDA;
+
+}
+
 *{
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  color: black;  
+  color: var(--color-title);  
 }
+
+
 body{
   font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  background-color: var(--color-bgc-back);
 }
 
 a{
@@ -32,23 +48,26 @@ li{
 }
 
 .r-padd, .l-padd{
-  background-color: aqua;
+  background-color: var(--color-bgc-back);
+  /* visibility: hidden; */
 }
 
 .sidebar {
   grid-area: sidebar;
-  background-color: #bb1c3f; 
+  background-color: var(--color-white); 
 }
 
 .main {
   grid-area: main;
-  background-color: #90ac3e;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 /* header */
-.header{
-  border-bottom: 1px solid black;
-  background-color: #999;
+.header{  
+  border-bottom: 1px solid var(--border-color);
+  background-color: var(--color-white);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -67,7 +86,7 @@ li{
 }
 
 .header .search-area{
-  background-color: white;
+  background-color: #EDF3F8;
   padding: 5px 10px;
   border-radius: 20px;
   width: 300px;
@@ -78,27 +97,55 @@ li{
 } 
 
 .header .search-area input{
+  background-color: transparent;
   border: none;
   outline: none;
-  /* background-color: #90ac3e; */
   width: 100%;
 }
 
 .header .search-area label i{
   cursor: pointer;
-  color: rgba(0, 0, 0, 0.507) !important;
+  color: var(--color-dark-gray) !important;
 }
 
 .header ul{
   display: flex;
-  width: 20%;
   justify-content: space-between;
+  gap: 30px;
 }
 
 .header ul li a{
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  padding: 5px 20px;
 }
+
+.header ul li a::after{
+  position: absolute;
+  content: '';
+  width: 0%;
+  height: 2px;
+  border-radius: 10px;
+  background-color: var(--color-title);
+  bottom: -10px;
+  transition: 0.4s all;
+}
+
+.header ul li a:hover::after{
+  width: 100%;
+}
+
+#nav-active::after{
+  width: 100% !important;
+}
+
+
+/* fin header */
+
+
+
+
 
 
