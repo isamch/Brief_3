@@ -87,6 +87,7 @@ textarea::placeholder{
 }
 
 
+
 /* sort by */
 .sort-by{
   display: flex;
@@ -105,6 +106,17 @@ textarea::placeholder{
   cursor: pointer;
 
 }
+
+
+
+/* postes  : */
+
+#postes-cont{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 
 /* post owner */
 .creat-post .owner-info{
