@@ -15,12 +15,15 @@
     display: grid;
     grid-template-rows: repeat(7,135px);
     gap: 10px;
+    background-color: var(--color-bgc-back);
 }
 
 .profile-informations{
     grid-row: 1/5;
-    background-color: var(--color-white);
     overflow: hidden;
+    border-radius: 15px;
+    background-color: var(--color-white);
+    border: solid 1px var(--border-color);
 }
 .profile-cover{
     width: 100%;
@@ -56,8 +59,8 @@
 }
 .user-name div{
     margin:  35px 20px 10px 20px ;
-    padding: 0px 5px 2px 5px;
-    width: 14%;
+    padding: 0px 10px 2px 10px;
+    /* width: 14%; */
     height: 30px;
     display: flex;
     justify-content: space-around;
@@ -67,6 +70,7 @@
 }
 .user-name span {
     font-size: 25px;
+    padding-right: 10px;
     color: rgb(37, 164, 223);
 }
 .user-name h3 {
@@ -91,13 +95,13 @@
     font-weight: normal ;
 }
 .profile-btn{
-    padding: 10px 130px 10px 20px;
+    padding: 10px 130px 15px 20px;
     display: flex;
     justify-content: space-between;
 }
 .profile-btn button{
     padding: 3px 18px;
-    border: solid 2px rgb(37, 164, 223);
+    border: solid 2px var(--color-linkedin-blue);
     background-color: transparent;
     border-radius: 30px;
     color: var(--color-linkedin-blue);
@@ -106,15 +110,14 @@
 }
 .profile-btn button:first-child{
     padding: 3px 18px;
-    border: solid 2px rgb(37, 164, 223);
-    background-color: rgb(37, 164, 223);
+    border: solid 2px var(--color-linkedin-blue);
+    background-color: var(--color-linkedin-blue);
     border-radius: 30px;
     color: white;
     font-size: 15px;
     font-weight: 600;
 }
 .section-cards{
-    /* background-color: red; */
     width: 100%;
     padding-left: 10px;
     height: 25%;
@@ -132,9 +135,15 @@
     display: flex;
     flex-shrink: 0;
     border-radius: 5px;
-    box-shadow: 1px 2px 10px 1px #555555;
-    padding: 15px 0px 0px 15px;
+    box-shadow: 1px 2px 5px 1px #555555;
+    padding: 15px 15px 0px 15px;
+    display: flex;
+    justify-content: space-between;
 }
+.section-cards .develop-card:first-child{
+    background-color: rgba(99, 165, 250, 0.822);
+}
+
 .info-section h2{
     font-size: 18px;
     padding-bottom: 8px;
@@ -154,11 +163,126 @@
 
 .profile-experiences{
     grid-row: 5/6;
-    background-color: purple;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: var(--color-white);
+    border: solid 1px var(--border-color);
+}
+.titel-experience{
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: space-between;
+}
+.experience-content{
+    padding-top: 10px;
+}
+.linkedin-img{
+    display: flex;
+    width: 100%;
+}
+.linkedin-img .img-cadr{
+    display: flex;
+    width: 60px;
+    height: 60px;
+}
+.tall{
+    width: 100%;
+    height: 90%;
+}
+.tall img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.experience{
+    width: 100%;
+    padding-left: 7px;
+}
+.experience h1{
+    font-size: 20px;
+}
+.experience h3{
+    font-size: 13px;
+    font-weight: normal;
+}
+.experience h4{
+    font-size: 10px;
+    font-weight: normal;
+    color: #555555;
+}
+.icons-experionse{
+    /* background-color: red; */
+    padding: 5px;
+    width: 7%;
+    display: flex;
+    justify-content: space-between;
+}
+.icons-experionse i{
+    font-size: large;
+}
+
+.formation-1{
+    height: 100%;
+    /* background-color: red; */
+    padding-bottom: 25px;
 }
 
 
 .profile-formations{
+    padding: 10px;
     grid-row: 6/8;
-    background-color: gold;
+    border-radius: 20px;
+    background-color: var(--color-white);
+    border: solid 1px var(--border-color);
+}
+.profile-formations .titel-experience{
+    height: 15%;
+}
+
+@media (max-width: 730px) {
+    .profile-btn{
+        display: flex;
+        flex-wrap: wrap;
+        padding-bottom: 0;
+        padding-right: 10px;
+    }
+    .profile-btn button{
+        margin-bottom: 10px;
+        padding-right: 0px;
+    }
+    .icons-experionse{
+        padding: 5px;
+        width: 10%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .icons-experionse i{
+        font-size: medium;
+    }
+    .profile-container{
+        grid-template-rows: repeat(8,135px);
+    }
+    .profile-formations{
+        padding: 10px;
+        grid-row: 6/9;
+        border-radius: 20px;
+        background-color: var(--color-white);
+        border: solid 1px var(--border-color);
+    }
+    .user-name h2{
+        display: flex;
+        margin:  35px 0px 10px 20px ;
+        font-size: 20px;
+    }
+}
+@media (max-width: 460px) {
+    .user-name h2{
+        display: flex;
+        margin:  35px 0px 5px 20px ;
+        font-size: 18px;
+    }
+    .address-info h3{
+        font-size: 14px;
+    }
 }
