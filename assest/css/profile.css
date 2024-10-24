@@ -286,3 +286,25 @@
         font-size: 14px;
     }
 }
+@media (max-width: 390px) {
+    .profile-btn button{
+        font-size: 13px;
+        color: #000;
+    }
+    .His-goals{
+        font-size: 13px !important;
+    }
+    .section-cards .develop-card{
+        background-color: var(--color-white);
+        margin: 10px 20px 10px 0px;
+        width: 285px;
+    }
+    .info-section h3{
+        padding-bottom: 8px;
+    }
+}
+@media (max-width: 350px) {
+    .add-section{
+        display: none;
+    }
+}
