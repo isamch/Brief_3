@@ -35,6 +35,7 @@
   border-radius: 50%;
   object-fit: cover;
   cursor: pointer;
+  flex-shrink: 0;
 }
 
 .creat-post .img-input textarea{
@@ -44,8 +45,10 @@
   outline: none;
   border: 1px solid var(--border-color);
   resize: none;
+  height: 60px;
   padding:  1% 0 0 20px;
 } 
+
 textarea::placeholder{
   color: var(--color-text);
 
@@ -61,14 +64,15 @@ textarea::placeholder{
 .creat-post .post-media ul{
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
+  width: 100%;
 }
 
 .creat-post .post-media ul li{
   display: flex;
   align-items: baseline;
-  gap: 20px;
-  padding: 15px 5%;
+  gap: 10px;
+  padding: 15px 3%;
   cursor: pointer;
   border-radius: 5px;
   transition: 0.4s;
@@ -125,8 +129,8 @@ textarea::placeholder{
 }
 
 .creat-post .paragraph{
-  width: 70%;
-  margin: 0 auto;
+  width: 90%;
+  margin: 2% auto;
 }
 
 .creat-post .paragraph img{
@@ -142,4 +146,39 @@ textarea::placeholder{
 }
 
 
+
+
+@media screen and (max-width: 900px){
+  .creat-post .img-input img{
+    background-color: #0077B5;
+    margin-right: 3%;
+
+  }
+  
+  .creat-post .owner-info h2{
+    font-size: 18px;
+  }
+
+  .creat-post .paragraph{
+    font-size: 15px;
+  }
+
+}
+
+@media screen and (max-width: 500px){
+  .creat-post .img-input img{
+    width: 50px;
+    height: 50px;
+  }
+
+  .creat-post .paragraph{
+    font-size: 14px;
+  }
+
+  .creat-post .post-media span{
+    display: none;
+  }
+
+
+}
 
