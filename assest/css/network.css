@@ -1,25 +1,131 @@
-*{
-    padding: 0;
-    margin: 0;
-}
-.All-cards{
-    background-color: gray;
-    margin-top: 10px;
+:root {
+    --color-linkedin-blue: #0077B5;
+    --color-dark-gray: #333333;
+    --color-bgc-back: #F4F2EE;
+    --color-white: #FFFFFF;
+    --color-text: #333333;
+    --color-title: #000000;
+    --color-subtitle: #555555;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --border-color: #DFDEDA;
 
 }
-.All-cards .card{
-    background-color: white;
+/* Upper cards */
+.grow {
+    width: 95%;
+    height: 50px;
+    background-color: var(--color-white);
+    border-radius: 20px;
+}
+
+.growButt {
+    background-color: var(--color-white);
+    border: none;
+    position: relative;
+    padding: 0 10px 0 10px;
+    height: 100%;
+    cursor: pointer;
+    margin-left: 20px;
+    border-bottom: transparent solid 2px;
+    transition: 0.4s;
+    font-weight: 300px;
+}
+
+.growButt:hover {
+    background-color: var(--color-bgc-back);
+    border-bottom: #000000 solid 2px;
+}
+ 
+
+.All-cards {
+
+    margin-top: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+
+}
+
+.All-cards .card {
+    background-color: var(--color-white);
     height: 290px;
     width: 220px;
-    margin: 10px;
+    margin-top: 10px;
     border-radius: 10px;
-    
+    border: 1px solid var(--border-color);
+    transition: 0.4s
 }
-.Cover-img{
-    background-color: aqua;
-    
+
+.All-cards .card:hover {
+    box-shadow: 0 10px 10px var(--border-color);
 }
-.Cover-img img{
-    background-size: cover;
-    width: fit-content;
+
+.Cover-img {
+    height: 80px;
+    width: 220px;
+    border-radius: 10px 10px 0 0;
+
+}
+
+.Cover-img img {
+    object-fit: cover;
+    width: 220px;
+    height: 80px;
+    border-radius: 10px 10px 0 0;
+}
+
+.Profil-img {
+    width: 104px;
+    height: 104px;
+    border-radius: 100px;
+    position: relative;
+    bottom: 50px;
+    left: 60px;
+    cursor: pointer;
+}
+
+.Profil-img img {
+    position: relative;
+    object-fit: cover;
+    width: 104px;
+    height: 104px;
+    box-sizing: border-box;
+    background-clip: content-box;
+    border: 0 solid transparent;
+    border-radius: 50%;
+}
+
+.User-Name {
+    position: relative;
+    bottom: 40px;
+    text-align: center;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.infoUser {
+    text-align: center;
+    color: var(--color-subtitle);
+    position: relative;
+    bottom: 30px;
+    font-size: small;
+}
+
+.AddFriend {
+    position: relative;
+    left: 52px;
+    background-color: var(--color-white);
+    color: var(--color-linkedin-blue);
+    border-radius: 30px;
+    border: solid 2px var(--color-linkedin-blue);
+    padding: 3px 20px 3px 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.AddFriend:hover {
+    color: #004182 !important;
+    background-color: rgb(55, 143, 233, 0.1);
 }
