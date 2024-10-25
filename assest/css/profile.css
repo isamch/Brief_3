@@ -122,10 +122,7 @@
     padding-left: 10px;
     height: 25%;
     display: flex;
-    overflow-x: auto;
     overflow-y: hidden;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none;
 }
 .section-cards .develop-card{
     background-color: var(--color-white);
@@ -137,7 +134,6 @@
     border-radius: 5px;
     box-shadow: 0px 1px 3px 0px #555555;
     padding: 15px 15px 0px 15px;
-    display: flex;
     justify-content: space-between;
 }
 .section-cards .develop-card:first-child{
