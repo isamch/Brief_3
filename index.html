@@ -3,16 +3,21 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="find job and offre a job">
+    <meta name="keywords" content="job search, career opportunities, professional networking, employment, find work, career growth, job listings, recruitment, talent network, job platform, hiring, professional connections, business networking, job board, work opportunities">
+    <meta name="author" content="Hamza saaf">
+
     <title>JoblnTech</title>
     <!-- link -->
     <link rel="stylesheet" href="assest/css/style.css">
     <link rel="stylesheet" href="assest/css/home.css">
 
     <!-- link icons -->
-     <link rel="shortcut icon" href="assest/images/logo banner.png" type="image/x-icon">
+    <link rel="shortcut icon" href="assest/images/logo banner.png" type="image/x-icon">
     <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
+    <!-- js time lib -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
 
 
   </head>
@@ -55,11 +60,11 @@
       <aside class="sidebar">
         <div class="miniProfile">
           <div class="cover">
-            <img src="assest/images/img/post_3.png" alt="">
+            <img src="assest/images/img/post_3.png" alt="side cover">
           </div>
           <div class="userInfo">
             <div class="mini-profile-pic">
-              <img src="assest/images/img/5.jpg" alt="">
+              <img src="assest/images/img/5.jpg" alt="profile img">
             </div>
             <h2>Shanon R. Wheeler</h2>
             <div class="adress">
@@ -150,7 +155,7 @@
                   ▶ Use JS logic for media queries and rendering based on screen size 📱💻
                   ▶ Cleaner, more modular React code!
               </p>
-              <img src="assest/images/img/post_3.png">
+              <img src="assest/images/img/post_3.png" alt="post image">
             </div>
             <div class="break-line-p-creat"></div>
             <div class="post-media">
@@ -256,7 +261,7 @@
                   hashtag#React hashtag#FullStackDevelopment hashtag#LearningJourney hashtag#WebDevelopment hashtag#Coding
                 </details>
               </p>
-              <img src="assest/images/img/post_4.jpg">
+              <img src="assest/images/img/post_4.jpg" alt="images post">
             </div>
             <div class="break-line-p-creat"></div>
             <div class="post-media">
@@ -310,7 +315,7 @@
                   hashtag#React hashtag#FullStackDevelopment hashtag#LearningJourney hashtag#WebDevelopment hashtag#Coding
                 </details>
               </p>
-              <img src="assest/images/img/post_5.jpg">
+              <img src="assest/images/img/post_5.jpg" alt="image post">
             </div>
             <div class="break-line-p-creat"></div>
             <div class="post-media">
@@ -343,6 +348,8 @@
       const textAreaPost = document.getElementById("postTextarea");
       const postsCont = document.getElementById("postes-cont");
 
+      var now = moment();
+
       textAreaPost.addEventListener('keydown', function(event) {
         if (event.key === 'Enter') {
           event.preventDefault();
@@ -357,7 +364,7 @@
                     <div class="small-info">
                       <small>408 followers</small>
                       <br>
-                      <small>2 h .<i class="fa-solid fa-globe"></i></small>
+                      <small>${now.format("HH:mm")} <i class="fa-solid fa-globe"></i></small>
                     </div>
                   </div>
                   <div class="more-post">
@@ -370,7 +377,6 @@
                 <p>
                   ${textAreaPost.value}
                 </p>
-                <img src="assest/images/img/post_3.png">
               </div>
               <div class="break-line-p-creat"></div>
               <div class="post-media">

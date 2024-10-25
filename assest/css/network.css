@@ -50,12 +50,13 @@
 
 .All-cards .card {
     background-color: var(--color-white);
-    height: 290px;
+    height: 300px;
     width: 220px;
     margin-top: 10px;
     border-radius: 10px;
     border: 1px solid var(--border-color);
-    transition: 0.4s
+    transition: 0.4s;
+
 }
 
 .All-cards .card:hover {
@@ -111,10 +112,13 @@
     position: relative;
     bottom: 30px;
     font-size: small;
+    width: 90%;
+    margin: 0 auto;
 }
 
 .AddFriend {
     position: relative;
+    top: -10px;
     left: 52px;
     background-color: var(--color-white);
     color: var(--color-linkedin-blue);
@@ -129,3 +133,5 @@
     color: #004182 !important;
     background-color: rgb(55, 143, 233, 0.1);
 }
+
+
