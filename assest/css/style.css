@@ -431,6 +431,7 @@ li{
     align-items: center;
     overflow: hidden;
     transition: 0.4s;
+    z-index: 1000;
   }
 
   .hidd-menu{
